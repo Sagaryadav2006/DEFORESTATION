@@ -54,5 +54,40 @@ Model Building & Training: Different classification models (e.g., Logistic Regre
 
 Model Evaluation: The models will be evaluated based on metrics such as Accuracy, Precision, Recall, and F1-Score to determine the best-performing algorithm.
 
+This project utilizes a Logistic Regression model, a robust and highly interpretable machine learning algorithm ideal for binary classification tasks. After experimenting with other models, Logistic Regression was chosen for its excellent performance and reliability in this context.
 
+What the Model Predicts
+The model is trained to solve a specific classification problem: "Will a deforestation event occur in this specific area?"
+
+It analyzes 30 different input features for a geographical tile and produces two key outputs:
+
+A binary prediction:
+
+1 if a deforestation event is likely.
+
+0 if a deforestation event is not likely.
+
+A confidence score: The probability of the prediction being correct, which helps in assessing the risk level.
+
+How the Model Makes Predictions
+The model learns patterns from historical data to identify which factors are most strongly associated with forest loss. The analysis revealed that the most influential features for its predictions are:
+
+Historical Forest Loss: Cumulative Deforested Area (%) and Forest Loss Last 3Y (%) are the strongest predictors.
+
+Human Activity: Population Density (per km²), Distance to Road (km), and the presence of a Logging Concession.
+
+Environmental Factors: Vegetation health indices like NDVI and EVI.
+
+Essentially, the model has learned that areas with a history of deforestation that are close to human infrastructure are at the highest risk.
+
+Final Model Performance
+The model demonstrates a high degree of accuracy and reliability on unseen test data, making it a trustworthy tool for an early-warning system.
+
+Overall Accuracy: 97.04%
+
+Recall (for "Deforestation"): 92% - The model successfully identifies 92% of all actual deforestation events, meaning very few critical events are missed.
+
+Precision (for "Deforestation"): 96% - When the model raises an alarm, it is correct 96% of the time, leading to very few false alarms.
+
+This strong balance between recall and precision makes the model highly effective and suitable for real-world deployment.
 
